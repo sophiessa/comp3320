@@ -30,4 +30,111 @@ int main()
 
 	return 0;
 }
-                                 
+                   
+		   
+		   
+		   
+	#include<iostream>
+using namespace std;
+
+int count_chars(char* word) {
+	int i = 0;
+	while (word[i] != '\0') {
+		i++;
+	}
+	return i;
+
+}
+
+
+int reverse_string(char* word, char* word_reversed) {
+	int word_count = count_chars(word);
+	word_reversed[word_count];
+
+	for(int i = 0; i < word_count; i++) {
+		word_reversed[i] = word[word_count - 1 - i];
+	}
+	return 0;
+}
+
+
+struct complex {
+	double real;
+	double img;
+
+	complex add_complex(complex c) {
+		complex result;
+		result.real = real + c.real;
+		result.img = img + c.img;
+		return result;	
+	}
+};
+
+int main() {
+
+	//Problem#1
+	cout << "Problem #1" << endl;
+	for (int i = 1; i <= 5; i++) {
+		for (int j = 1; j <= i; j++) {
+			cout << i;
+		}	
+		cout << endl;
+	}
+
+	
+	//Problem#2
+	cout << "Problem #2" << endl;
+	int spaces = 12;
+	int stars = 1;
+	while (spaces >= 0) {
+		for(int i = 0; i < spaces; i++) {
+			cout << " ";
+		}
+		for(int i = 0; i < stars; i++) {
+			cout << "*";
+		}
+		cout << endl;
+		//cout << "Spaces: " << spaces << endl;
+		//cout << "Stars:  " << stars << endl;
+		spaces -= 4;
+		stars += 4;
+	}
+
+	//Problem#3
+	cout << "Problem #3" << endl;
+
+
+	//Problem#4
+	cout << "Problem #4" << endl;
+	
+	char word[] = "1234";
+	char word_reversed[4];
+	int char_count = 0;
+
+	char_count = count_chars(word);
+	reverse_string(word, word_reversed);
+
+	cout << "Original string: " << word << " | " << "Reversed string: " << word_reversed << endl;
+	cout << "Count of characters in '" << word << "' is " << char_count << endl;	
+		
+
+	//Problem#5
+	cout << "Problem #5" << endl;
+	
+	complex c1, c2, result;
+	
+	cout << "Enter real and imaginary part of first complex number: ";
+	cin >> c1.real >> c1.img;
+	
+	cout << "Enter real and imaginary part of second complex number: ";
+	cin >> c2.real >> c2.img;
+
+	result = c1.add_complex(c2);
+
+	cout << "Result: " << result.real << " + " << result.img << " i " << endl;
+
+
+
+	return 0;
+}	   
+		   
