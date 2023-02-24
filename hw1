@@ -1,0 +1,33 @@
+//YRYSKELDI(YK) ANARBEKOV COMP3320 LAB-1 [C++] 
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+	char welcome_message[] = "Hello and Welcome to CS3320-1";
+	cout << welcome_message << endl;
+
+	char firstName[] = "YRYSKELDI";
+	char lastName[] = "ANARBEKOV";
+	cout << firstName << " " << lastName << endl;
+
+	float pi = 3.14;
+	cout << "Floating point number is:" << pi << endl;
+	
+	int list_of_nums[3];
+	for (int i = 0; i < 3; i++) 
+	{	
+		cout << "Enter a number: " << endl;
+		cin >> list_of_nums[i];	
+	}
+	cout << "Your numbers are: ";
+	for (int i = 0; i < 2; i++) 
+	{
+		cout << list_of_nums[i] << ", ";
+	}
+	cout << list_of_nums[2] << endl;
+
+	return 0;
+}
+                                 
